@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4329606245551981234}
   - component: {fileID: 6298697097095541403}
   - component: {fileID: 6800849642757936155}
-  - component: {fileID: 3109024408465566703}
-  m_Layer: 0
+  - component: {fileID: 5940752831897725259}
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -132,25 +132,30 @@ MonoBehaviour:
   - {fileID: 3960304242410099906, guid: e55e7b74c5a2d5246b07356fcdfc6ace, type: 3}
   - {fileID: 3203549901680704364, guid: f462a69730a8afe43a3c45a2bc40e90d, type: 3}
   - {fileID: 8005816570907693029, guid: 49dc8c3d6c2f93f4c8aa3ca75c7afa25, type: 3}
---- !u!195 &3109024408465566703
-NavMeshAgent:
+--- !u!54 &5940752831897725259
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8622232569753892094}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1
-  m_BaseOffset: 0.5
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

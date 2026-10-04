@@ -12,7 +12,7 @@ public class Cube : MonoBehaviour
     [Space(5)]
     [Header("Timer")]
     [Tooltip(""), SerializeField] private float currentTime;
-    [SerializeField] private bool isTime;
+    [SerializeField] private bool isTime = false;
     [Space(5)]
     [Header("Variables 'Float'")]
     [Tooltip("Référence la vitesse de rotation du cube"),SerializeField] private float sRotation;
@@ -36,6 +36,20 @@ public class Cube : MonoBehaviour
 
     void Update()
     {
+        if (isTime)
+        {
+            if(currentTime > 0)
+            {
+                currentTime -= Time.deltaTime;
+
+            }
+            else
+            {
+                currentTime = 0;
+                isTime = false;
+            }
+        }
+
         //Cuble(current.transform.position);
 
         /*if (timing)

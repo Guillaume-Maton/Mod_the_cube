@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using UnityEditor.Experimental.GraphView;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
 public class Cube : MonoBehaviour

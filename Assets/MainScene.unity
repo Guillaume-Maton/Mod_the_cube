@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 479091770}
   - component: {fileID: 479091769}
   - component: {fileID: 479091768}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: firstPoint
   m_TagString: Point
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -317,7 +317,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 1517746155}
   - component: {fileID: 1517746154}
   - component: {fileID: 1517746153}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: secondPoint
   m_TagString: Point
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -530,7 +530,7 @@ GameObject:
   - component: {fileID: 1596501294}
   - component: {fileID: 1596501293}
   - component: {fileID: 1596501292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: fourthPoint
   m_TagString: Point
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -638,7 +638,7 @@ GameObject:
   - component: {fileID: 1890405195}
   - component: {fileID: 1890405194}
   - component: {fileID: 1890405193}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: thirdPoint
   m_TagString: Point
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
@@ -766,7 +766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
+  m_RequiresDepthTextureOption: 1
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
   m_Cameras: []
@@ -864,13 +864,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981515673}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.56, y: -0.9, z: -18.7}
+  m_LocalRotation: {x: 0.055385854, y: 0, z: 0, w: 0.99846506}
+  m_LocalPosition: {x: -10.56, y: 6, z: -68.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 6.35, y: 0, z: 0}
 --- !u!23 &3468655099756416090
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -951,11 +951,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 803ae8246b6a6aa4aa499bb276296282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTime: 0
   firstPoint: {fileID: 479091771}
   secondPoint: {fileID: 1517746156}
   thirdPoint: {fileID: 1890405196}
   fourthPoint: {fileID: 1596501295}
+  currentTime: 0
+  rand: 0
+  timing: 0
+  banabread: 0
 --- !u!65 &6584136472734841971
 BoxCollider:
   m_ObjectHideFlags: 0

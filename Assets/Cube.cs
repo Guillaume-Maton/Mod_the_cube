@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [RequireComponent(typeof(MeshRenderer))]
@@ -16,9 +17,6 @@ public class Cube : MonoBehaviour
 
     Vector3 nextPoint;
     MeshRenderer Renderer;
-
-    // [SerializeField] private float sRotation;
-    // [Tooltip("Référence la taille du cube"),SerializeField] private Transform scale;
     #endregion
 
     #region Méthodes
@@ -48,14 +46,12 @@ public class Cube : MonoBehaviour
         // Random position & color
         if (!timing)
         {
-            if (!banabread)
-            {
-                transform.position = Vector3.MoveTowards(transform.position, nextPoint, 10f * Time.deltaTime);
-            }
-            else if (banabread)
+            if (banabread)
             {
                 UpdateRandom();
             }
+
+            transform.position = Vector3.MoveTowards(transform.position, nextPoint, 10f * Time.deltaTime);
         }
 
         if (timing)
@@ -86,18 +82,22 @@ public class Cube : MonoBehaviour
             case 1:
                 nextPoint = firstPoint.position;
                 Renderer.material.color = Color.white;
+                transform.localScale = Vector3.one * 1f;
                 break;
             case 2:
                 nextPoint = secondPoint.position;
                 Renderer.material.color = Color.blue;
+                transform.localScale = Vector3.one * 1.3f;
                 break;
             case 3:
                 nextPoint = thirdPoint.position;
                 Renderer.material.color = Color.green;
+                transform.localScale = Vector3.one * 0.3f;
                 break;
             case 4:
                 nextPoint = fourthPoint.position;
                 Renderer.material.color = Color.red;
+                transform.localScale = Vector3.one * 2.3f;
                 break;
         }
     }
@@ -134,11 +134,5 @@ public class Cube : MonoBehaviour
         Gizmos.DrawLine(thirdPoint.transform.position, fourthPoint.transform.position);
         Gizmos.DrawLine(fourthPoint.transform.position, firstPoint.transform.position);
     }
-
-    // position : transform.position = new Vector3(3, 4, 1);
-
-    // rotation : transform.Rotate(10.0f * Time.deltaTime, 0.0f, 0.0f);
-
-    // taille : transform.localScale = Vector3.one * 1.3f;
     #endregion
 }
